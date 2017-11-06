@@ -1,0 +1,176 @@
+<html>
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/bootstrap-theme.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet" type="text/css">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" />
+<style>
+body
+{
+background-image:url('background_nebula.jpg');
+}
+.c1
+{
+
+  background-color:#00264d;
+  margin:5px;
+}
+.block
+{
+ background-color:#00264d;
+ opacity:0.8;
+ border-radius:10%;
+  font-family:Boogaloo;
+  font-size:18px;
+  padding-top:5px;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  font-size: 20px;
+
+}
+.head
+{
+  color: #00e6e6;
+  font-size:45px;
+  margin-left:25px;
+  font-family:Boogaloo;
+  float:left;
+  padding-top:10px;
+}
+
+ul {
+    position: relative;
+   list-style-type: none;
+   margin:0;
+   padding:0;
+   overflow: hidden;
+   background-color:#00264d;
+   opacity: 0.8;
+ }
+
+li {
+   float: right;
+}
+li a {
+   display: block;
+   color: #00e6e6;
+   font-family: Boogaloo;
+   text-align: center;
+   padding: 5px 10px;
+   text-decoration: none;
+   font-size:30px;
+}
+li a:hover {
+   background-color:#55ACEE;
+   padding-left:25px;
+   padding-right:25px;
+   transition: 0.5s;
+   box-shadow:3px 2px lightblue;
+}
+.footer {
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+padding: 0.5rem;
+}
+canvas {
+   display:block;
+}
+canvas {
+    display:block;
+}
+</style>
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var particles = [];
+var num_particles = 1000;//Change that to your liking
+
+//Helper function to get a random color - but not too dark
+function GetRandomColor() {
+var r = 0, g = 0, b = 0;
+r=51;
+g=204;
+b=51;
+//rgb(51, 204, 51)
+return "rgb(" + r + "," + g + ","  + b + ")";
+}
+//Particle object with random starting position, velocity and color
+var Particle = function () {
+this.x = canvas.width * Math.random();
+this.y = canvas.height * Math.random();
+this.vx = 1;
+this.vy = 4;
+this.Color = GetRandomColor();
+}
+//Ading two methods
+Particle.prototype.Draw = function (ctx) {
+ctx.fillStyle = this.Color;
+ctx.fillRect(this.x, this.y, 2, 2);
+}
+Particle.prototype.Update = function () {
+this.x += this.vx;
+this.y += this.vy;
+
+if (this.x<0 || this.x > canvas.width)
+    this.vx = -this.vx;
+
+if (this.y < 0 || this.y > canvas.height)
+    this.vy = -this.vy;
+}
+function loop() {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+for (var i = 0; i < num_particles; i++) {
+    particles[i].Update();
+    particles[i].Draw(ctx);
+}
+requestAnimationFrame(loop);
+}
+//Create particles
+for (var i = 0; i < num_particles; i++)
+particles.push(new Particle());
+loop();
+</script>
+</head>
+<body>
+  <canvas id="canvas">
+  <ul>
+   <li class="head"><a href="home.html">BUZZGAMES!</a></li>
+    <li style="padding-top:15px"><a href="login_final.html">Login/SignUp</a></li>
+    <li style="padding-top:15px"><a href="about_page.html">About</a></li>
+    <li style="padding-top:15px"><a href="">Contact</a></li>
+    <li style="padding-top:15px"><a href="">News</a></li>
+    <li style="padding-top:15px"><a href="">Categories</a></li>
+    <li style="padding-top:15px;padding-left:50px"><a href="home.html">Home</a></li>
+  </ul>
+  <div class="block">
+  <font color="#ff7733"><p align="center">
+  Greetings Fellow Gamer!<br>
+  Welcome to Buzz Games!<br>
+  Buzz Games is an online website for games and game reviews.<br>
+  It showcases the best games in the hottest categories,making this a gamer's paradise.<br>
+  Categories range from Action,Adventure,Sport and Multiplayer to Role Playing and Educational games.<br>
+  These categories provide a wide range of games,each providing a different experience,to give the user a satisfying gaming session.<br>
+
+  Apart from serving as a portal for these games,users have the option of reviewing the games they have played,to display their personal feedback and advice.<br>
+  This can be very helpful for newbie gamers who are looking to get the best gaming experience they can,without the hassles of google searches and unnecessary browsing.<br>
+
+  Buzz Games is a one stop destination for the gaming enthusiast,and the gaming newbie alike.<br>
+
+  We hope you like the website and what it has to offer.<br>
+
+  Happy Gaming!<br>
+
+  -Team Buzz Games<br>
+  </div>
+    </canvas>
+
+</body>
+</html>
