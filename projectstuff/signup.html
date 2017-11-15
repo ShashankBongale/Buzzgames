@@ -81,8 +81,6 @@ li a:hover {
    margin-left:40px;
  }
 .footer {
-
-  position: fixed ;
   right: 0;
   bottom: 0;
   left: 0;
@@ -117,28 +115,28 @@ li a:hover {
 <div class="col-md-5">
   <div class="login_block">
 <h2 style="font-family:Boogaloo;margin-left:32%;padding-top:10px">Register</h2><br>
-<form action="">
+<form action="" id="my_form">
 <label style="font-family:Boogaloo;font-size:20px">Username:<br>
 <div class="col-xs-18">
-<input type="text"  placeholder="Username" name="login" color="black" class="form-control" style="margin-left:7%"></label><br>
+<input type="text"  placeholder="Username" name="login" color="black" class="form-control" style="margin-left:7%" required></label><br>
 </div>
 <label style="font-family:Boogaloo;font-size:20px">Password:<br>
 <div class="col-xs-18">
-<input type="password" placeholder="Enter your password" name="login" class="form-control" style="margin-left:7%"></label>
+<input type="password" placeholder="Enter your password" name="login" class="form-control"  style="margin-left:7%" required id="password"></label>
 </div>
 <br>
 <label style="font-family:Boogaloo;font-size:20px">Confirm Password:<br>
 <div class="col-xs-18">
-<input type="password" placeholder="Re-type your password" name="login" class="form-control" style="margin-left:7%"></label>
+<input type="password" placeholder="Re-type your password" name="login" class="form-control" style="margin-left:7%" required id="confirm"></label>
 </div>
 <br>
 <label style="font-family:Boogaloo;font-size:20px">Email-ID:<br>
 <div class="col-xs-18">
-<input type="email" placeholder="Enter your Email-ID" name="login" class="form-control" style="margin-left:7%;"></label>
+<input type="email" placeholder="Enter your Email-ID" name="login" class="form-control" style="margin-left:7%;" required></label>
 </div>
 <br>
 <label style="font-family:Boogaloo;font-size:20px">DOB:<br>
-<input type="date" placeholder="dd/mm/yyyy" name="login" class="form-control" style="margin-left:23px"></label>
+<input type="date" placeholder="dd/mm/yyyy" name="login" class="form-control" style="margin-left:23px" required></label>
 <br>
 <label><input type="submit" class="btn btn-success btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px;margin-top:25px;margin-left:40px"></label>
 <label><input type="reset" class="btn btn-danger btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px;margin-top:25px;margin-left:60px"></label>
@@ -147,9 +145,33 @@ li a:hover {
 </div>
 <br>
 <br>
-<div class="footer">
+</form>
+<div class="footer c1">
  <b style="font-size:10px;color:#00e6e6;font-family:Boogaloo;">2017 © BUZZGAMES, All Rights Reserved.</b>
  </div>
  </form>
+ <script>
+ pass=document.getElementById("password");
+ conf=document.getElementById("confirm");
+ dom=document.getElementById("my_form");
+dom.addEventListener("submit",handler,false);
+function handler()
+{
+  if(pass.value!=conf.value)
+  {
+    alert("Password do not match");
+    return false;
+  }
+  else if(conf.value="")
+  {
+    alert("Password has not been confirmed");
+    return false;
+  }
+  else {
+    alert("Successfully Registered");
+    return true;
+  }
+}
+</script>
 </body>
 </html>
