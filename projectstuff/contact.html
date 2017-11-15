@@ -2,12 +2,11 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
- <title>Login Page</title>
+ <title>Contact</title>
  <style>
  body
  {
@@ -23,6 +22,19 @@
    font-family:Boogaloo;
    opacity: 0.9;
 
+ }
+ .login_block
+ {
+  color:#00e6e6;
+   background-color:#00274d;
+   margin-right: 65px;
+   padding-left: 35px;
+   padding-bottom: -100px;
+   padding-top: 2px;
+   opacity: 0.6;
+   margin-bottom: :50px;
+   border-radius: 45px;
+   margin-top: -10px;
  }
  .head
  {
@@ -63,25 +75,12 @@ li a:hover {
     transition: 0.5s;
     box-shadow:3px 2px lightblue;
 }
- .login_block
- {
-  color:#00e6e6;
-   background-color:#00274d;
-   margin-right: 65px;
-   padding-left: 35px;
-   padding-bottom: 30px;
-   padding-top: 2px;
-   opacity: 0.6;
-   margin-bottom: : 0px;
-   border-radius: 45px;
-   margin-top: -10px;
- }
  .c3
  {
    margin-left:40px;
  }
 .footer {
-  position: fixed;
+
   right: 0;
   bottom: 0;
   left: 0;
@@ -90,6 +89,9 @@ li a:hover {
 .vl {
     border-left: 1px solid green;
     height: 500px;
+}
+.form-rounded {
+border-radius: 1rem;
 }
  </style>
 </head>
@@ -108,40 +110,51 @@ li a:hover {
 <br>
 <br>
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-7">
     <div class="c3">
     <img src="logo.png" alt="buzzgames-logo" height="435px" width="635px">
   </div>
 </div>
-<div class="col-md-4">
+<div class="col-md-5">
   <div class="login_block">
-  <h2 style="font-family:Boogaloo;margin-left:32%;padding-top:10px"><b>Login</b></h2>
+    <!--
+<h2 style="font-family:Lato;margin-left:32%;padding-top:10px"><b>Deatails About Query</b></h2><br>
+-->
+<form action="" id="my_form">
   <br>
-<label style="font-family:Boogaloo;font-size:20px">Username:<br>
+<label style="font-family:Lato;font-size:20px">First Name:<br>
 <div class="col-xs-18">
-<input type="text"  placeholder="Email or Username" name="login" color="black" class="form-control col-xs-6"></label><br><br>
+<input type="text"  placeholder="First Name" name="login" color="black" class="form-control" style="margin-left:7%"></label><br>
 </div>
-<label style="font-family:Boogaloo;font-size:20px">Password:<br>
+<label style="font-family:Lato;font-size:20px">Last Name:<br>
 <div class="col-xs-18">
-<input type="password" placeholder="Enter your password" name="login" class="form-control"></label>
+<input type="text" placeholder="Last Name" name="login" class="form-control" style="margin-left:7%"></label>
 </div>
 <br>
-<label><button class="btn btn-info btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px;margin-left:55px">Submit</button></label><br>
-<div style="margin-top:15px">
-<div class ="row">
-<div class="col-md-6">
-<label><button class="btn btn-danger btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px">Forgot Password</button></label>
+<label style="font-family:Lato;font-size:20px">Email-ID<br>
+<div class="col-xs-18">
+<input type="email" placeholder="Enter your Email-ID" name="login" class="form-control" style="margin-left:7%"></label>
 </div>
-<div class="col-md-6">
-<a href="signup.html"><label><button class="btn btn-success btn-block" style="margin-left:20px;border-radius:10px;font-family:Boogaloo;padding:10px">New User</button></label></a>
- </div>
- </div>
+<br>
+<label style="font-family:Lato;font-size:20px">Query Heading<br>
+<div class="col-xs-18">
+<input type="text" placeholder="Query About" name="login" class="form-control" style="margin-left:23px"></label>
 </div>
- </div>
+<br>
+<label style="font-family:Lato;font-size:20px">Details About Query<br>
+<div class="col-xs-18">
+<textarea class="form-control form-rounded" rows="3" style="margin-left:7%" placeholder="Enter Your Details"></textarea>
+<label><input type="submit" class="btn btn-success btn-block" style="border-radius:10px;font-famly:Oswald;padding:10px;margin-top:25px;margin-left:45px"></label>
+<label><input type="reset" class="btn btn-danger btn-block" style="border-radius:10px;font-famly:Oswald;padding:10px;margin-top:25px;margin-left:95px"></label>
 </div>
 </div>
+</div>
+</div>
+<br>
+<br>
 <div class="c1 footer">
- <b  style="margin-bottom:25px;color:#00e6e6;font-size: 10px;font-family:Boogaloo;">2017 © BUZZGAMES, All Rights Reserved.</b>
+ <b style="font-size: 12px;color:#00e6e6;">2017 © BUZZGAMES, All Rights Reserved.</b>
  </div>
+ </form>
 </body>
 </html>
