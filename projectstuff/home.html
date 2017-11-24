@@ -3,19 +3,14 @@
 <link href="css/bootstrap.css" rel="stylesheet" />
 <link href="css/bootstrap-theme.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet" type="text/css">
+<link rel="icon" href="logo.png" type="image/x-icon"/>
 <head>
  <title>Home Page</title>
  <style>
  body
  {
- background-image:url('background_nebula.jpg');
- }
- .c1
- {
+}
 
-   background-color:#00264d;
-   margin:5px;
- }
  .block
  {
    background-color:#00264d;
@@ -30,6 +25,33 @@
 
 
  }
+
+.mb
+{
+  
+   background-color:#ffffff;
+   opacity:0.65;
+   font-family:Book Antiqua;
+   font-size:18px;
+   top:75px;
+   bottom:100px;
+   position: absolute;
+    width: 60%;
+    border-radius: 10px;
+    margin-left: 260px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 80%;
+
+
+
+
+}
+
+
+
  .head
  {
    color: #00e6e6;
@@ -40,15 +62,17 @@
    padding-top:10px;
  }
 
- ul {
+  ul {
      position: relative;
     list-style-type: none;
     margin:0;
     padding:0;
     overflow: hidden;
     background-color:#00264d;
-    opacity: 0.8;
+    opacity: 1;
+
   }
+
 
 li {
     float: right;
@@ -69,12 +93,77 @@ li a:hover {
     transition: 0.5s;
     box-shadow:3px 2px lightblue;
 }
-.footer {
- right: 0;
- bottom: 0;
- left: 0;
- padding: 0.5rem;
+
+.c1
+ {
+
+   background-color:#00264d;
+   padding-top: 3px;
+   padding-bottom:15px;
+   margin-bottom: 0px;
+   font-family:Boogaloo;
+   opacity: 0.9;
+
+ }
+ .footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+  position: fixed;
 }
+
+
+
+
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg5 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("giphy (1).gif");
+  opacity:1;
+  height: 100%;
+
+
+}
+
+.bgimg-2 {
+  background-image: url("Shooting.png");
+  height: 100%;
+}
+
+.bgimg-3 {
+  background-image: url("clashofclans.jpg");
+  height: 100%;
+}
+
+.bgimg-4 {
+  background-image: url("plvszom.jpeg");
+  height: 100%;
+}
+
+.bgimg-5 {
+  background-image: url("letsplay.jpeg");
+  height: 100%;
+
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+
 
 
 
@@ -93,71 +182,91 @@ li a:hover {
      <li style="padding-top:15px;padding-left:50px"><a href="home.html">Home</a></li>
    </ul>
 
+<div class="bgimg-1">
+    <div class="caption"> 
+    
+    <span style="font-family:Courier New;color:#ffff33;font-size:90px;"><b>WELCOME TO BUZZGAMES!</b></span>
+    <br>
 
-<div class="block">
-<h3 style="font-family:Boogaloo;color:#ffff00;font-size:25px;" align="center">MOST POPULAR GAMES</h3>
+    <span style="font-family:Courier New;color:#ff3300;font-size:60px;padding-top: 20px;"><b>Go Game Or Go Home</b> </span>
+    <br>
+  </div>
 </div>
 
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="bubble.jpeg" style="width:100%">
-  <img class="mySlides" src="checkers.jpeg" style="width:100%">
-  <img class="mySlides" src="csport.jpeg" style="width:100%">
-  <img class="mySlides" src="letsplay.jpeg" style="width:100%">
-  <img class="mySlides" src="warfare.jpeg" style="width:100%">
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
-<br>
-<br>
-<br>
-<div class="block" style="border-radius:0%;">
-<h3 style="font-family:Boogaloo;color:#ffff00;font-size:25px;font-size:30px;">Message from the Creators</h3>
+
+
+
+<div class="bgimg-2">
+  <div class="mb" style="font-family:Lucida Console;color:#77773c;font-size: 40px; opacity: 0.79;margin-top:20px;height: 70%;">
+   Shooty-bang-bang games are fun and all, but what other genres are out there?
+   <br>
+   <br>
+   <b>Check out our all-time favourite games.</b>
+   
+  </div>
+      
 </div>
 
-<p class="block" style="font-family:Boogaloo;color:#ff7733;font-size:18px;">
+
+
+<div class="bgimg-3">
+    <div class="mb" style="color:#ff9933;font-size: 45px; opacity: 0.86;padding-top:30px;height: 50%;margin-top: 70px;font-family:Lucida Console;">
+    Inspired by ancient Gods, Played By Modern Heroes! <br>
+    Check out our newest <span style="font-family: Palatino Linotype;color:  #ff6600;">Strategy Games! </span> 
+  </div>
+
+    
+</div>
+
+
+
+<div class="bgimg-4">
+   <div class="mb" style="font-family:Lucida Console;color: #ff8000;font-size: 40px; opacity: 0.79;margin-top:20px;height: 35%; padding-top: 85px;text-align: center;">
+    <a href="categories_page.html">Click here to FIND MORE!</a>
+  </div>
+ 
+    <div class="mb" style="font-family:Lucida Console;color:black;font-size: 20px;opacity:0.87;margin-top:400px;height: 25%; padding-top: 30px;padding-bottom:10px;padding-left:20px;width: 40%;left: 40%;background-color: #ffcc00;text-align: center;">
+      Scroll down to see what the creators have to say!
+      <br>
+      To know more view our <a href="about_page.html"><span style="color:red;">About Page</span></a>
+      <br>
+      Need help? You can contact us <a href="contact.html"><span style="color:red;">here</span></a>
+
+  </div>
+
+
+</div>
+
+<div class="bgimg-1">
+<div class="mb" style="padding-top: 20px;padding-bottom: 20px;">
+
 Greetings Fellow Gamer!<br>
-Welcome to Buzz Games!<br>
-Buzz Games is an online website for games and game reviews.<br>
-It showcases the best games in the hottest categories,making this a gamer's paradise.<br>
+Welcome to Buzz Games!<br><br>
+Buzz Games is an online website for games and game reviews.
+It showcases the best games in the hottest categories,making this a gamer's paradise.<br><br>
 Categories range from Action,Adventure,Sport and Multiplayer to Role Playing and Educational games.<br>
-These categories provide a wide range of games,each providing a different experience,to give the user a satisfying gaming session.<br>
-
-Apart from serving as a portal for these games,users have the option of reviewing the games they have played,to display their personal feedback and advice.<br>
-This can be very helpful for newbie gamers who are looking to get the best gaming experience they can,without the hassles of google searches and unnecessary browsing.<br>
-
+These categories provide a wide range of games,each providing a different experience,to give the user a satisfying gaming session.<br><br>
+Apart from serving as a portal for these games,users have the option of reviewing the games they have played,to display their personal feedback and advice.
+This can be very helpful for newbie gamers who are looking to get the best gaming experience they can,without the hassles of google searches and unnecessary browsing.<br><br>
 Buzz Games is a one stop destination for the gaming enthusiast,and the gaming newbie alike.<br>
-
 We hope you like the website and what it has to offer.<br>
-
 Happy Gaming!<br>
--Team Buzz Games<br><br>
+-Team Buzz Games
 
-</p>
+  </div>
 
-
-
-
+</div>
 
 
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
+ 
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-</script>
+
+
+
+
+
+
 
 
 
