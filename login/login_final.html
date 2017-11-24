@@ -7,8 +7,6 @@
   <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
-  <link rel="icon" href="logo.png" type="image/x-icon"/>
-
  <title>Login Page</title>
  <style>
  body
@@ -87,7 +85,6 @@ li a:hover {
   bottom: 0;
   left: 0;
   padding: 0.5rem;
-  position: fixed;
 }
 .vl {
     border-left: 1px solid green;
@@ -119,23 +116,25 @@ li a:hover {
   <div class="login_block">
   <h2 style="font-family:Boogaloo;margin-left:32%;padding-top:10px"><b>Login</b></h2>
   <br>
-<label style="font-family:Boogaloo;font-size:20px">Username:<br>
+<form action="login_back.php" method="post">
+<label style="font-family:Boogaloo;font-size:20px">Email:<br>
 <div class="col-xs-18">
-<input type="text"  placeholder="Email or Username" name="login" color="black" class="form-control col-xs-6"></label><br><br>
+<input type="text"  placeholder="Email or Username" name="email" color="black" class="form-control col-xs-6"></label><br><br>
 </div>
 <label style="font-family:Boogaloo;font-size:20px">Password:<br>
 <div class="col-xs-18">
-<input type="password" placeholder="Enter your password" name="login" class="form-control"></label>
+<input type="password" placeholder="Enter your password" name="pass" class="form-control"></label>
 </div>
 <br>
-<label><button class="btn btn-info btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px;margin-left:55px">Submit</button></label><br>
+<input type="submit" class="btn btn-info btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px;margin-left:25px"><br>
+</form>
 <div style="margin-top:15px">
 <div class ="row">
 <div class="col-md-6">
-<label><button class="btn btn-danger btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px">Forgot Password</button></label>
+<a href="forgot.html"><label><button class="btn btn-danger btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px">Forgot Password</button></label></a>
 </div>
 <div class="col-md-6">
-<a href="signup.html"><label><button class="btn btn-success btn-block" style="margin-left:20px;border-radius:10px;font-family:Boogaloo;padding:10px">New User</button></label></a>
+<a href="signup.html"><label><button class="btn btn-success btn-block" style="margin-left:50px;border-radius:10px;font-family:Boogaloo;padding:10px">New User</button></label></a>
  </div>
  </div>
 </div>

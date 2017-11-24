@@ -6,8 +6,6 @@
   <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
-  <link rel="icon" href="logo.png" type="image/x-icon"/>
-
  <title>Contact</title>
  <style>
  body
@@ -87,7 +85,6 @@ li a:hover {
   bottom: 0;
   left: 0;
   padding: 0.5rem;
-  position: fixed;
 }
 .vl {
     border-left: 1px solid green;
@@ -123,30 +120,30 @@ border-radius: 1rem;
     <!--
 <h2 style="font-family:Lato;margin-left:32%;padding-top:10px"><b>Deatails About Query</b></h2><br>
 -->
-<form action="" id="my_form">
+<form action="contact_backend.php" id="my_form" method="post">
   <br>
-<label style="font-family:Lato;font-size:20px">First Name:<br>
+<label style="font-family:Boogaloo;font-size:20px">First Name:<br>
 <div class="col-xs-18">
-<input type="text"  placeholder="First Name" name="login" color="black" class="form-control" style="margin-left:7%"></label><br>
+<input type="text"  name="firstname" placeholder="First Name"  color="black" class="form-control" style="margin-left:7%"></label><br>
 </div>
-<label style="font-family:Lato;font-size:20px">Last Name:<br>
+<label style="font-family:Boogaloo;font-size:20px">Last Name:<br>
 <div class="col-xs-18">
-<input type="text" placeholder="Last Name" name="login" class="form-control" style="margin-left:7%"></label>
-</div>
-<br>
-<label style="font-family:Lato;font-size:20px">Email-ID<br>
-<div class="col-xs-18">
-<input type="email" placeholder="Enter your Email-ID" name="login" class="form-control" style="margin-left:7%"></label>
+<input type="text" name="lastname" placeholder="Last Name"  class="form-control" style="margin-left:7%"></label>
 </div>
 <br>
-<label style="font-family:Lato;font-size:20px">Query Heading<br>
+<label style="font-family:Boogaloo;font-size:20px">Email-ID<br>
 <div class="col-xs-18">
-<input type="text" placeholder="Query About" name="login" class="form-control" style="margin-left:23px"></label>
+<input type="email" name="email" placeholder="Enter your Email-ID"  class="form-control" style="margin-left:7%"></label>
 </div>
 <br>
-<label style="font-family:Lato;font-size:20px">Details About Query<br>
+<label style="font-family:Boogaloo;font-size:20px">Query Heading<br>
 <div class="col-xs-18">
-<textarea class="form-control form-rounded" rows="3" style="margin-left:7%" placeholder="Enter Your Details"></textarea>
+<input type="text" name="query_about" placeholder="Query About"  class="form-control" style="margin-left:23px"></label>
+</div>
+<br>
+<label style="font-family:Boogaloo;font-size:20px">Details About Query<br>
+<div class="col-xs-18">
+<textarea name="details" class="form-control form-rounded" rows="3" style="margin-left:7%" placeholder="Enter Your Details"></textarea>
 <label><input type="submit" class="btn btn-success btn-block" style="border-radius:10px;font-famly:Oswald;padding:10px;margin-top:25px;margin-left:25px"></label>
 <label><input type="reset" class="btn btn-danger btn-block" style="border-radius:10px;font-famly:Oswald;padding:10px;margin-top:25px;margin-left:75px"></label>
 </div>
