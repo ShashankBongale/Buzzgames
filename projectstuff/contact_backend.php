@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+  <link rel="icon" href="logo.png" type="image/x-icon"/>
 <head>
  <title>signup</title>
  <style>

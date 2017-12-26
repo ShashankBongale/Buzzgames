@@ -28,11 +28,11 @@
 
 .mb
 {
-  
+
    background-color:#ffffff;
    opacity:0.65;
    font-family:Book Antiqua;
-   font-size:18px;
+   font-size:15px;
    top:75px;
    bottom:100px;
    position: absolute;
@@ -173,9 +173,14 @@ li a:hover {
 
 <body>
 
+
+
   <ul>
-    <li class="head"><a href="home.html">BUZZGAMES!</a></li>
-     <li style="padding-top:15px"><a href="login_final.html">Login/SignUp</a></li>
+    <li class="head"><a href="home.html" id="anchor"><span id="game">BUZZGAMES!</span></a></li>
+     <!--
+     <li style="float:left;padding-left:5px"><img src="logo.png" alt="weblogo" height="75px" width="75px"></li>
+    -->
+     <li style="padding-top:15px"><a href="login_final.html" id="sign"><span id="signup">Login/SignUp</span></a></li>
      <li style="padding-top:15px"><a href="about_page.html">About</a></li>
      <li style="padding-top:15px"><a href="contact.html">Contact</a></li>
      <li style="padding-top:15px"><a href="categories_page.html">Categories</a></li>
@@ -183,8 +188,8 @@ li a:hover {
    </ul>
 
 <div class="bgimg-1">
-    <div class="caption"> 
-    
+    <div class="caption">
+
     <span style="font-family:Courier New;color:#ffff33;font-size:90px;"><b>WELCOME TO BUZZGAMES!</b></span>
     <br>
 
@@ -202,9 +207,9 @@ li a:hover {
    <br>
    <br>
    <b>Check out our all-time favourite games.</b>
-   
+
   </div>
-      
+
 </div>
 
 
@@ -212,10 +217,10 @@ li a:hover {
 <div class="bgimg-3">
     <div class="mb" style="color:#ff9933;font-size: 45px; opacity: 0.86;padding-top:30px;height: 50%;margin-top: 70px;font-family:Lucida Console;">
     Inspired by ancient Gods, Played By Modern Heroes! <br>
-    Check out our newest <span style="font-family: Palatino Linotype;color:  #ff6600;">Strategy Games! </span> 
+    Check out our newest <span style="font-family: Palatino Linotype;color:  #ff6600;">Strategy Games! </span>
   </div>
 
-    
+
 </div>
 
 
@@ -224,7 +229,7 @@ li a:hover {
    <div class="mb" style="font-family:Lucida Console;color: #ff8000;font-size: 40px; opacity: 0.79;margin-top:20px;height: 35%; padding-top: 85px;text-align: center;">
     <a href="categories_page.html">Click here to FIND MORE!</a>
   </div>
- 
+
     <div class="mb" style="font-family:Lucida Console;color:black;font-size: 20px;opacity:0.87;margin-top:400px;height: 25%; padding-top: 30px;padding-bottom:10px;padding-left:20px;width: 40%;left: 40%;background-color: #ffcc00;text-align: center;">
       Scroll down to see what the creators have to say!
       <br>
@@ -258,7 +263,7 @@ Happy Gaming!<br>
 </div>
 
 
- 
+
 
 
 
@@ -274,4 +279,23 @@ Happy Gaming!<br>
 <div class="c1 footer">
 <b style="margin-bottom:25px;color:#00e6e6;font-size:10px;font-family:Boogaloo;">2017 © BUZZGAMES, All Rights Reserved.</b>
 </div>
+<script>
+if(localStorage.getItem("user"))
+{
+  var login=document.getElementById("signup");
+  var user=localStorage.getItem("user");
+  var a=document.getElementById("anchor");
+  var link=document.getElementById("sign");
+  link.setAttribute("href","");
+  a.setAttribute("href","logout.html");
+  //alert(user);
+  login.innerHTML=user;
+  var game=document.getElementById("game");
+  game.innerHTML="Signout";
+}
+else {
+  //alert("no");
+}
+</script>
 </body>
+</html>

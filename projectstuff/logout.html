@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
   <link rel="icon" href="logo.png" type="image/x-icon"/>
- <title>Sign Up</title>
+ <title>Login Page</title>
  <style>
  body
  {
@@ -24,19 +24,6 @@
    font-family:Boogaloo;
    opacity: 0.9;
 
- }
- .login_block
- {
-  color:#00e6e6;
-   background-color:#00274d;
-   margin-right: 65px;
-   padding-left: 35px;
-   padding-bottom: -100px;
-   padding-top: 2px;
-   opacity: 0.6;
-   margin-bottom: :50px;
-   border-radius: 45px;
-   margin-top: -10px;
  }
  .head
  {
@@ -77,6 +64,19 @@ li a:hover {
     transition: 0.5s;
     box-shadow:3px 2px lightblue;
 }
+ .login_block
+ {
+  color:#00e6e6;
+   background-color:#00274d;
+   margin-right: 65px;
+   padding-left: 35px;
+   padding-bottom: 30px;
+   padding-top: 2px;
+   opacity: 0.6;
+   margin-bottom: : 0px;
+   border-radius: 45px;
+   margin-top: -10px;
+ }
  .c3
  {
    margin-left:40px;
@@ -94,6 +94,10 @@ li a:hover {
  </style>
 </head>
 <body>
+  <script>
+  localStorage.removeItem("user");
+  alert("Successfully LoggedOut");
+  </script>
   <ul>
     <li class="head"><a href="home.html">BUZZGAMES!</a></li>
     <!--
@@ -108,72 +112,45 @@ li a:hover {
 <br>
 <br>
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-md-8">
     <div class="c3">
     <img src="logo.png" alt="buzzgames-logo" height="435px" width="635px">
   </div>
 </div>
-<div class="col-md-5">
+<div class="col-md-4">
   <div class="login_block">
-<h2 style="font-family:Boogaloo;margin-left:32%;padding-top:10px">Register</h2><br>
-<form  id="my_form" action="signup_backnew.php" method="post">
-<label style="font-family:Boogaloo;font-size:20px">Username:<br>
+  <h2 style="font-family:Boogaloo;margin-left:32%;padding-top:10px"><b>Login</b></h2>
+  <br>
+<form action="loginback.php" method="post">
+<label style="font-family:Boogaloo;font-size:20px">Email:<br>
 <div class="col-xs-18">
-<input type="text"  name="username" placeholder="Username"  color="black" class="form-control" style="margin-left:7%" required></label><br>
+<input type="text"  placeholder="Email or Username" name="email" color="black" class="form-control col-xs-6" id="email" required></label><br><br>
 </div>
 <label style="font-family:Boogaloo;font-size:20px">Password:<br>
 <div class="col-xs-18">
-<input type="password" name="password" placeholder="Enter your password"  class="form-control"  style="margin-left:7%" required id="password"></label>
+<input type="password" placeholder="Enter your password" name="pass" class="form-control" id="password" required></label>
 </div>
 <br>
-<label style="font-family:Boogaloo;font-size:20px">Confirm Password:<br>
-<div class="col-xs-18">
-<input type="password" name="repass" placeholder="Re-type your password" class="form-control" style="margin-left:7%" required id="confirm" ></label>
-</div>
-<br>
-<label style="font-family:Boogaloo;font-size:20px" >Email-ID:<br>
-<div class="col-xs-18">
-<input type="email" name="email" placeholder="Enter your Email-ID"  class="form-control" style="margin-left:7%;" required></label>
-</div>
-<br>
-<label style="font-family:Boogaloo;font-size:20px">DOB:<br>
-<input type="date" name="dob" name="login" class="form-control" style="margin-left:23px" required></label>
-<br>
-<label><input type="submit" class="btn btn-success btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px;margin-top:25px;margin-left:40px"></label>
-<label><input type="reset" class="btn btn-danger btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px;margin-top:25px;margin-left:60px"></label>
-</div>
-</div>
-</div>
-<br>
-<br>
-</form>
-<div class="footer c1">
- <b style="font-size:10px;color:#00e6e6;font-family:Boogaloo;">2017 © BUZZGAMES, All Rights Reserved.</b>
- </div>
- </form>
- <script>
- pass=document.getElementById("password");
- conf=document.getElementById("confirm");
- dom=document.getElementById("my_form");
-dom.addEventListener("submit",handler,false);
-function handler(e)
-{
-  if(pass.value!=conf.value)
-  {
-    alert("Password do not match");
-    e.preventDefault();
-  }
-  else if(conf.value="")
-  {
-    alert("Password has not been confirmed");
-    e.preventDefault();
+<input type="submit" class="btn btn-info btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px;margin-left:10px">
 
-  }
-  else {
-    //alert("Successfully Registered");
-    return true;
-  }
-}
-</script>
+<div style="margin-top:15px">
+<div class ="row">
+<div class="col-md-6">
+<a href="forgot.html"><span class="btn btn-danger btn-block" style="border-radius:10px;font-family:Boogaloo;padding:10px">Forgot Password</span></a>
+</div>
+<div class="col-md-6">
+<a href="signup.html"><span class="btn btn-success btn-block" style="margin-left:20px;border-radius:10px;font-family:Boogaloo;padding:10px">New User<span></a>
+ </div>
+ </div>
+</div>
+ </div>
+</div>
+</div>
+</form>
+<br><br>
+
+<div class="c1 footer" style="margin-top:9%">
+ <b  style="margin-bottom:25px;color:#00e6e6;font-size: 10px;font-family:Boogaloo;">2017 © BUZZGAMES, All Rights Reserved.</b>
+ </div>
 </body>
 </html>

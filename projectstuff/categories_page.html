@@ -93,10 +93,13 @@ transition: 0.5s;
 }
  </style>
 </head>
- <body>
+ <body id="body">
    <ul>
-     <li class="head"><a href="home.html">BUZZGAMES!</a></li>
-     <li style="padding-top:15px"><a href="login_final.html">Login/SignUp</a></li>
+     <li class="head"><a href="home.html" id="anchor"><span id="game">BUZZGAMES!</span></a></li>
+      <!--
+      <li style="float:left;padding-left:5px"><img src="logo.png" alt="weblogo" height="75px" width="75px"></li>
+     -->
+      <li style="padding-top:15px"><a href="login_final.html" id="sign"><span id="signup">Login/SignUp</span></a></li>
      <li style="padding-top:15px"><a href="about_page.html">About</a></li>
      <li style="padding-top:15px"><a href="contact.html">Contact</a></li>
      <li style="padding-top:15px"><a href="categories_page.html">Categories</a></li>
@@ -104,7 +107,7 @@ transition: 0.5s;
    </ul>
 
 <h1 align="center" style="font-family:Boogaloo;color:#66ff66;font-size:50px;padding-left:40px;">CATEGORIES</h1>
-<p style="font-family:Boogaloo;color:#ff7733;font-size:25px;padding-left:60px;padding-right:30px;" align="left" >
+<p style="font-family:Boogaloo;color:#ff7733;font-size:25px;padding-left:60px;padding-right:30px;" align="left" id="para">
 Having best free online games are not only a fun way to waste a couple of hours but are incredibly
 convenient too! You can play them in your browser without waiting for them to download and install!
 <br>
@@ -115,28 +118,28 @@ Here's our list of best online browser games !!<br>
 </p>
 
 <div class="w3-container">
- 
+
 </div>
 
-<div class="w3-content w3-display-container" style="max-width:800px">
+<div class="w3-content w3-display-container" style="max-width:800px" id="slide">
   <a href="puzzles_page.html">
-  <img class="mySlides" src="puzzles.jpg" width="100%"  style="border: 25px solid #00264d;
+  <img class="mySlides" src="puzzles.jpg" width="100%"  height="70%" style="border: 25px solid #00264d;
     border-radius: 4px;">
 </a>
 <a href="strategy_page.html">
-  <img class="mySlides" src="strategy.jpg" width="100%" style="border: 25px solid #00264d;
+  <img class="mySlides" src="strategy.jpg" width="100%" height="70%" style="border: 25px solid #00264d;
     border-radius: 4px;">
 </a>
 <a href="shooting_page.html">
-  <img class="mySlides" src="Shooter.jpeg" width="100%"  style="border: 25px solid #00264d;
+  <img class="mySlides" src="Shooter.jpeg" width="100%"  height="70%" style="border: 25px solid #00264d;
     border-radius: 4px;">
 </a>
    <a href="roleplaying_page.html">
-  <img class="mySlides" src="Roleplay.jpeg" width="100%"  style="border: 25px solid #00264d;
+  <img class="mySlides" src="Roleplay.jpeg" width="100%"  height="70%" style="border: 25px solid #00264d;
     border-radius: 4px;">
 </a>
 <a href="boardgames_page.html">
-  <img class="mySlides" src="Boardgame.jpeg" width="100%"  style="border: 25px solid #00264d;
+  <img class="mySlides" src="Boardgame.jpeg" width="100%"  height="70%" style="border: 25px solid #00264d;
     border-radius: 4px;">
 </a>
   <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
@@ -151,6 +154,25 @@ Here's our list of best online browser games !!<br>
 </div>
 
 <script>
+if(localStorage.getItem("user"))
+{
+  var login=document.getElementById("signup");
+  var user=localStorage.getItem("user");
+  var a=document.getElementById("anchor");
+  var link=document.getElementById("sign");
+  link.setAttribute("href","");
+  a.setAttribute("href","logout.html");
+  //alert(user);
+  login.innerHTML=user;
+  var game=document.getElementById("game");
+  game.innerHTML="Signout";
+}
+else {
+  alert("Please login to see the categories");
+  var slide=document.getElementById("slide");
+  slide.style.visibility="hidden";
+  
+}
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -166,15 +188,15 @@ function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}    
+  if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+     x[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
      dots[i].className = dots[i].className.replace(" w3-white", "");
   }
-  x[slideIndex-1].style.display = "block";  
+  x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " w3-white";
 }
 </script>
